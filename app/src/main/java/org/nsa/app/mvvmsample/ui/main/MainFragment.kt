@@ -40,7 +40,7 @@ class MainFragment : Fragment() {
 
     private fun requestHome() {
 
-        val url = BuildConfig.serverUrl + "/home"
+        val url = BuildConfig.serverUrl + "/home" // << -101 에러 발생 (원인 파악 안됨)
         val params = HashMap<String, Any>()
 
         AQueryReq(context, url, object : AQueryReq.Callback {
